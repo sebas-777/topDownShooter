@@ -6,9 +6,9 @@ public class Arrow : MonoBehaviour
 
     [SerializeField] private float speed;
    
-    void Start()
+    public void Launch(Vector2 direction)
     {
-        GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+        GetComponent<Rigidbody2D>().velocity = direction*speed;
     }
 
     private void OnCollisionEnter2D()
